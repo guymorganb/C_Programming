@@ -35,7 +35,7 @@ For example, in scanf("%d", &age);, &age is the address of the age variable. sca
 
     // scanf("%19s", name); 
     // Taking input for a string. Limiting to 19 to save space for null terminator, %s is the format specifier for a string
-    getchar(); // Consume the leftover newline character
+    
 
     printf("Your age is: %d\n", age);
     printf("Your gpa is: %lf\n", gpa);

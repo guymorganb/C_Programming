@@ -90,3 +90,60 @@ int main() {
 }
 ```
 The source file main.c includes math_operations.h, so it can use the add function, the SQUARE macro, and the PI constant defined in the header. The implementation (definition) of the functions declared in math_operations.h would be in a corresponding .c file, typically with the same name as the header (e.g., math_operations.c).
+
+
+## Makefile using Clang
+
+Sure, I'd be happy to explain each line of the `Makefile`:
+
+```makefile
+# Variables
+CC = clang
+```
+This line sets the variable `CC` to `clang`, which is the compiler that will be used.
+
+```makefile
+CFLAGS = -Iinclude
+```
+This line sets the variable `CFLAGS` to `-Iinclude`. The `-I` option tells the compiler to look in the `include` directory for header files.
+
+```makefile
+DEPS = $(wildcard include/*.h)
+```
+This line sets the variable `DEPS` to the result of `$(wildcard include/*.h)`, which is a list of all `.h` files in the `include` directory. These are the dependencies for the object files.
+
+```makefile
+OBJ = $(patsubst src/%.c, obj/%.o, $(wildcard src/*.c))
+```
+This line sets the variable `OBJ` to the result of `$(patsubst src/%.c, obj/%.o, $(wildcard src/*.c))`. This command finds all `.c` files in the `src` directory, and then replaces `src/%.c` with `obj/%.o` to generate a list of object file names.
+
+```makefile
+# Rules
+all: bin/main
+```
+This line defines a rule for the target `all`. The target `all` depends on `bin/main`, so `make all` (or simply `make`, since `all` is the first target) will build `bin/main`.
+
+```makefile
+bin/main: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+```
+This rule says that `bin/main` depends on the files in `$(OBJ)`. If any of those files change, `bin/main` will be rebuilt. The command `$(CC) -o $@ $^ $(CFLAGS)` is run to build `bin/main`. Here, `$@` is the target (`bin/main`), `$^` is the dependencies (`$(OBJ)`), and `$(CFLAGS)` are the flags passed to the compiler.
+
+```makefile
+obj/%.o: src/%.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+```
+This is a pattern rule that applies to all object files. It says that an object file `obj/%.o` depends on the corresponding source file `src/%.c` and the header files `$(DEPS)`. If any of the dependencies change, the object file will be rebuilt. The command `$(CC) -c -o $@ $< $(CFLAGS)` is run to build the object file. Here, `$@` is the target (the object file), `$<` is the first dependency (the source file), and `$(CFLAGS)` are the flags passed to the compiler.
+
+```makefile
+.PHONY: clean
+```
+This line declares `clean` as a phony target. A phony target is one that is not associated with a file. It's always out-of-date, so its recipe is always executed if the target is requested.
+
+```makefile
+clean:
+	rm -f obj/*.o bin/main
+```
+This rule is for the target `clean`. It doesn't have any dependencies, so it always runs when requested. The command `rm -f obj/*.o bin/main` is run, which removes the object files and the `main` executable.
+
+I hope this helps! Let me know if you have any other questions. 😊
