@@ -1,48 +1,49 @@
 Sure, here's your text formatted as a comprehensive roadmap in markdown:
-# Project & Roadmap: TCP Server in C and Client in Swift
-
+# Project & Roadmap: QUICHE Server in C and Client in Swift
+## No longer going to use QUICHE going to use QUICHE
 ## Introduction
 
-The goal of this project is to set up a TCP server (written in C) that can communicate with a client application (written in Swift) on an iPhone. This approach is especially useful for learning network programming and exploring client-server interactions at a lower level than HTTP.
+The goal of this project is to set up a QUICHE server (written in C) that can communicate with a client application (written in Swift) on an iPhone. This approach is especially useful for learning network programming and exploring client-server interactions at a lower level than HTTP.
 
 ## Steps to Follow
 
-### 1. Writing the TCP Server in C
+### 1. Writing the QUICHE Server in C
 
-- Start by setting up the TCP server code in C. This server should listen for incoming TCP connections on a specified port.
+- Start by setting up the QUICHE server code in C. This server should listen for incoming QUICHE connections on a specified port.
 - The server should be able to handle requests sent from the client, process them (which might include performing some compute-heavy tasks), and then send back a response.
 
 ### 2. Developing the Swift Client
 
-- In Swift, you can use APIs like Stream, CFStream, or lower-level POSIX sockets to create a TCP client.
-- This client will connect to the TCP server running on your computer.
+- In Swift, you can use APIs like Stream, CFStream, or lower-level POSIX sockets to create a QUICHE client.
+- This client will connect to the QUICHE server running on your computer.
 - Write Swift code to send data to the server and receive responses. This data can be anything based on your application's needs (e.g., computational tasks, commands, etc.).
 
 ### 3. Integration and Testing
 
-- **Local Testing**: Initially, run the TCP server on your computer and connect to it from the Swift client running on your iPhone. Both devices should be on the same local network.
+- **Local Testing**: Initially, run the QUICHE server on your computer and connect to it from the Swift client running on your iPhone. Both devices should be on the same local network.
 - **IP Address and Port**: Your Swift client will need to know the server's IP address and the port on which it's listening.
-- **Data Format**: Decide on a format for sending and receiving data. Since you're working at the TCP level, you have full control over the protocol. This could be as simple as raw string messages or more structured binary data.
+- **Data Format**: Decide on a format for sending and receiving data. Since you're working at the QUICHE level, you have full control over the protocol. This could be as simple as raw string messages or more structured binary data.
 
 ### 4. Example Workflow
 
-- **Start the TCP Server**: Run it on your computer. It listens for incoming connections.
-- **Connect with the iPhone App**: Your Swift app initiates a TCP connection to the server.
+- **Start the QUICHE Server**: Run it on your computer. It listens for incoming connections.
+- **Connect with the iPhone App**: Your Swift app initiates a QUICHE connection to the server.
 - **Data Exchange**: The app sends a request (like a task to be computed) to the server. The server processes the request and sends back the results.
 - **Handling Responses**: The Swift app receives the response and acts accordingly (e.g., displays the results).
 
 ### 5. Security and Limitations
 
-- **Security**: Be aware of security implications. Raw TCP sockets don't provide encryption like HTTPS.
+- **Security**: Be aware of security implications. Raw QUICHE sockets don't provide encryption like HTTPS.
 - **Network Accessibility**: For real-world applications, if the server is behind a router, you'll need to handle network address translation (NAT) and firewall configurations.
 - **Scalability**: This approach is great for learning and small-scale applications. For production-level applications, especially those requiring high security, scalability, or complex data handling, more robust solutions involving proper backend development and secure protocols would be necessary.
 
 ### 6. Next Steps
 
-- Implement the basic Swift TCP client and test the connectivity with your C server.
+- Implement the basic Swift QUICHE client and test the connectivity with your C server.
 - Define a simple protocol for your data exchange.
 - Expand the functionality based on your learning and project requirements.
 
+## You will need to build a QUEUE on the raspberry pie to handle the data!!
 
 
 # Roadmap 

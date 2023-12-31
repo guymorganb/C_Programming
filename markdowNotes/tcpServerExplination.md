@@ -47,3 +47,42 @@ The iPhone app would need to be written in a way that it can establish a TCP con
 
 Creating a TCP server in C is a great way to learn about low-level network programming, and it gives you a deeper understanding of how networked applications work under the hood.
 
+Sure, here is the information in a nicely formatted markdown:
+
+## Communication Protocols
+
+1. **Internet Protocol (IP)**
+    - **Use**: Defines how applications and devices exchange packets of data with each other.
+    - **How it works**: Sets the formats and rules for exchanging data and messages between computers on a single network or several internet-connected networks.
+
+2. **Transmission Control Protocol (TCP)**
+    - **Use**: Used for everything from surfing the web (HTTP), sending emails (SMTP), and transferring files (FTP).
+    - **How it works**: Establishes a connection between two devices, divides the data into segments, and sends the segments to the destination device, where they are reassembled into the original data stream.
+
+3. **User Datagram Protocol (UDP)**
+    - **Use**: Prioritizes speed over reliability, used for time-sensitive use cases like video streaming, Voice over Internet Protocol (VoIP), video gaming, and Domain Name System (DNS) lookups.
+    - **How it works**: Uses a connectionless process to send data packets to a destination.
+
+4. **Hypertext Transfer Protocol (HTTP)**
+    - **Use**: An application-layer protocol for transmitting hypermedia documents, such as HTML.
+    - **How it works**: Designed for communication between web browsers and web servers, HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response.
+
+5. **Simple Mail Transfer Protocol (SMTP)**
+    - **Use**: An email protocol used by mail servers to send emails over the internet.
+    - **How it works**: Sets the rules for other email servers on error handling.
+
+6. **File Transfer Protocol (FTP)**
+    - **Use**: An Internet Standard Protocol that works on the application layer.
+    - **How it works**: Used to get access to email from the mail server.
+
+7. **Post Office Protocol (POP)**
+    - **Use**: An Internet Standard Protocol that works on the application layer.
+    - **How it works**: Used to get access to email from the mail server.
+
+8. **Message Queuing Telemetry Transport (MQTT)**
+    - **Use**: A lightweight, publish-subscribe, machine-to-machine network protocol for message queue/message queuing service.
+    - **How it works**: Designed for connections with remote locations that have devices with resource constraints or limited network bandwidth, such as in the Internet of Things (IoT).
+
+9. **Virtual Network Computing (VNC)**
+    - **Use**: A remote desktop protocol that allows users to access and control a computer’s graphical desktop environment over a network connection.
+    - **How it works**: VNC is platform-independent, meaning it can be used on various operating systems such as Windows, macOS, Linux, and others.

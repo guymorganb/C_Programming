@@ -1,6 +1,5 @@
 Sure, here's your text formatted as a comprehensive markdown:
 
-```markdown
 # Borrowing Compute Resources from iPhone
 
 The basic idea is to have your iPhone act as a client that receives requests from the server, performs computations, and then sends back the results. Here’s a general approach to achieving this:

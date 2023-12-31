@@ -26,8 +26,8 @@ prompt_for_project_type() {
     while true; do
         read -p "Enter project type (C/C++): or (press ^C to exit)" project_type
         case "$project_type" in
-            C|c) project_type="C"; break;;
-            C++|c++) project_type="C++"; break;;
+            C|c) project_type="C"; break;
+            C++|c++) project_type="C++"; break;
             *) echo "Invalid input. Please enter 'C' or 'C++'.";;
         esac
     done
