@@ -5,7 +5,6 @@ int main()
 {
 /* 
 The scanf function requires pointers to the variables where the input should be stored. When you pass a variable to scanf using the & operator (like &age), you're actually passing the address of the variable, not the variable itself. This allows scanf to directly modify the value at that address.
-
 For example, in scanf("%d", &age);, &age is the address of the age variable. scanf reads the input from the user and directly stores it at this address. 
 */
     int age;
