@@ -1,1 +1,13 @@
 
+[submodule "QUICHE_server/lib/lsquic"]
+	path = QUICHE_server/lib/lsquic
+	url = https://github.com/litespeedtech/lsquic.git
+[submodule "QUICHE_server/lib/dependencies/boringssl"]
+	path = QUICHE_server/lib/dependencies/boringssl
+	url = https://boringssl.googlesource.com/boringssl
+[submodule "QUICHE_server/lib/dependencies/zlib"]
+	path = QUICHE_server/lib/dependencies/zlib
+	url = https://github.com/madler/zlib.git
+[submodule "QUICHE_server/lib/dependencies/libevent"]
+	path = QUICHE_server/lib/dependencies/libevent
+	url = https://github.com/libevent/libevent.git
